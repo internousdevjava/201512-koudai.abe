@@ -61,7 +61,7 @@ public class KisoKadai3 {
 						
 					
 								while(true){
-										System.out.println("\n--メニュー--\n\n 1:追記\n 2:上書き\n 3:書き込み\n　4:終了\n");
+										System.out.println("\n--メニュー--\n\n 1:追記\n 2:上書き\n 3:書き込み\n　4:参照\n 5:終了\n");
 										BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 										str = br.readLine();
 					
@@ -69,15 +69,14 @@ public class KisoKadai3 {
 				if(str.matches("^[0-9]+$")){
 								if(n==1){
 										try {
-											PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file,true)));
+											PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
 											while(true){	
 												BufferedReader br3 = new BufferedReader(new InputStreamReader(System.in));
 												String str3 = br3.readLine();
-												pw.println(str3);
 												if(str3.equals(".end")){
 													break;
-													}
-													}
+												}pw.println(str3);
+												}
 													pw.close();
 											} catch (IOException e) {
 											System.out.println(e);
@@ -86,16 +85,17 @@ public class KisoKadai3 {
 								}
 				if(n==2){
 						try {
-							PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file,false)));
+							PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file,true)));
 							while(true){	
 								BufferedReader br4 = new BufferedReader(new InputStreamReader(System.in));
 								String str4 = br4.readLine();
-								pw.println(str4);
 								if(str4 .equals(".end")){
 									break;								
 									}
-								}
+												pw.println(str4);
+												
 								pw.close();
+								}
 							} catch (IOException e) {
 										System.out.println(e);
 										e.printStackTrace();
@@ -103,14 +103,13 @@ public class KisoKadai3 {
 						}
 				if(n==3){
 						try {
-							PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+							PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file,false)));
 							while(true){	
 								BufferedReader br5 = new BufferedReader(new InputStreamReader(System.in));
 								String str5 = br5.readLine();
-								pw.println(str5);
 								if(str5.equals(".end")){
 									break;
-									}
+									}pw.println(str5);
 								}
 								pw.close();
 							} catch (IOException e) {
@@ -118,7 +117,20 @@ public class KisoKadai3 {
 										e.printStackTrace();
 										}
 						}
-			if(n==4){
+				if(n==4){
+					try{
+						BufferedReader br8 = new BufferedReader(new InputStreamReader(System.in));
+						System.out.println("出力したいファイルを指定してください。");
+						String str8 = br8.readLine();
+						System.out.print(str8);
+						System.out.print("出力が完了しました。");
+						System.out.print("メニューを選択してください。");
+					}catch (IOException e) {
+						System.out.println(e);
+						e.printStackTrace();
+						}
+				
+				if(n==5){
 					System.out.println("バイバイ！");
 					System.exit(0);
 					}
@@ -137,7 +149,7 @@ public class KisoKadai3 {
 						e.printStackTrace();
 								}
 						}
-						}catch (IOException e) {
+						}}catch (IOException e) {
 						System.out.println(e);
 						e.printStackTrace();
 						}
