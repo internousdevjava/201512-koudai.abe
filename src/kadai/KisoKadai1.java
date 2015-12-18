@@ -27,26 +27,22 @@ public class KisoKadai1 {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
 			}
-		     
-		  int i = Integer.parseInt(str);{
-		    System.out.println("Y軸を入力してね♪");
-		    	try {
-		    		str = br.readLine();
-		    		} catch (IOException e) {
-		    			// TODO 自動生成された catch ブロック
-		    			e.printStackTrace();
-		    		}
-		    	}
-		    
-		    
-		    int j = Integer.parseInt(str);{
+		
+		  int i = Integer.parseInt(str);
+				  	System.out.println("Y軸を入力してね♪");
+				  	try {
+						str = br.readLine();
+					} catch (IOException e) {
+						// TODO 自動生成された catch ブロック
+						e.printStackTrace();
+					}
+		    		
+		  int j = Integer.parseInt(str);{
 			for( int x=1; x<=i; x++ ){
 				for( int y=1; y<=j; y++ ){
 							System.out.print(x*y+" ");
-		      }System.out.println();
+							}System.out.println();
+			  	}
 		    }
-
-	  }
-
-}
+	}
 }

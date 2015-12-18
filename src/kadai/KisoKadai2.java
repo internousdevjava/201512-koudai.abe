@@ -22,7 +22,7 @@ public class KisoKadai2 {
 		System.out.println("数当てゲームスタート！！");  
 		System.out.println("数を入れてね！");
 		int i = new java.util.Random().nextInt(99+1);
-	for(int j=1;;j++){
+	while(true){
 				BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 				String c=null;
 				try {
@@ -43,13 +43,13 @@ public class KisoKadai2 {
 	    					System.out.println("正解です！！");
 	    			}
 					}else{
-						System.out.println("数や！");
-					}continue;
+						System.out.println("半角数字でお願いします！");
+					continue;}
 					}
     				}
 	
 	public static boolean checkStringNumber(String number) {
-		Pattern p = Pattern.compile("^[0-9]*$||^[０－９]*$");
+		Pattern p = Pattern.compile("^[0-9]*$");
 		Matcher m = p.matcher(number);
 		
 		return m.find();

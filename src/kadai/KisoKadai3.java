@@ -25,8 +25,8 @@ public class KisoKadai3 {
 		System.out.println("～～テキストファイル読み書きプログラムの作成～～"); 
 		
 			if(true){
-					System.out.println("新規ファイルを作成しますか？");
-					System.out.println("\n 1:YES\n 2:NO\n");
+					System.out.println("新規ファイルを作成しますか？それとも参照しますか？");
+					System.out.println("\n 1:新規作成\n 2:参照\n");
 					BufferedReader br6 = new BufferedReader(new InputStreamReader(System.in));
 					try {
 						String str6 = br6.readLine();
