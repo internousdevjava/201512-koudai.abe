@@ -68,6 +68,7 @@ public class KisoKadai3 {
 				int n = Integer.parseInt(str);
 				if(str.matches("^[0-9]+$")){
 								if(n==1){
+									System.out.println(".endで終了する。");
 										try {
 											PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
 											while(true){	
@@ -84,6 +85,7 @@ public class KisoKadai3 {
 											}
 								}
 				if(n==2){
+						System.out.println(".endで終了する。");
 						try {
 							PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file,true)));
 							while(true){	
@@ -102,6 +104,7 @@ public class KisoKadai3 {
 										}
 						}
 				if(n==3){
+						System.out.println(".endで終了する。");
 						try {
 							PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file,false)));
 							while(true){	
